@@ -8,6 +8,6 @@ staticLibraries = libCryptoKitWrapper.a
 libraryPaths.ios_x64 = CryptoKitWrapper/build/Release-iphonesimulator
 libraryPaths.ios_arm64 = CryptoKitWrapper/build/Release-iphoneos
 
-linkerOpts = -L/usr/lib/swift
+linkerOpts = -L/usr/lib/swift -lto-embed-bitcode
 linkerOpts.ios_x64 = -ios_simulator_version_min 13.0.0 -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/
 linkerOpts.ios_arm64 = -iphoneos_version_min 13.0.0 -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/

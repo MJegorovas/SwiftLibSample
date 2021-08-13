@@ -25,6 +25,7 @@ kotlin {
         }
         compilations.getByName("main") {
             cinterops.create("CryptoKitWrapper") {
+                extraOpts("-libraryPath", "$rootDir/CryptoKitWrapper/build/Release-$platform")
                 val interopTask = tasks[interopProcessingTaskName]
                 interopTask.dependsOn(":CryptoKitWrapper:build${platform.capitalize()}")
                 includeDirs.headerFilterOnly(
