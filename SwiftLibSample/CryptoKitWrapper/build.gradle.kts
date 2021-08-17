@@ -4,6 +4,7 @@ listOf("iphoneos", "iphonesimulator").forEach { sdk ->
 
         commandLine(
             "xcodebuild",
+            "BITCODE_GENERATION_MODE=bitcode",
             "-project", "CryptoKitWrapper.xcodeproj",
             "-target", "CryptoKitWrapper",
             "-sdk", sdk
