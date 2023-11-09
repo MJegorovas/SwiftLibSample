@@ -1,0 +1,15 @@
+package = swift.cryptoKit
+language = Objective-C
+
+headers = CryptoKitWrapper/CryptoKitWrapper-Swift.h
+headerFilter = CryptoKitWrapper/*
+
+staticLibraries = libCryptoKitWrapper.a
+libraryPaths.ios_arm64 = ../CryptoKitWrapper/build/Release-iphoneos
+libraryPaths.ios_simulator_arm64 = ../CryptoKitWrapper/build/Release-iphonesimulator
+libraryPaths.osx = ../CryptoKitWrapper/build/Release-macosx
+
+linkerOpts = -L/usr/lib/swift
+linkerOpts.ios_simulator_arm64 = -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/
+linkerOpts.ios_arm64 = -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/
+linkerOpts.osx = -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/
